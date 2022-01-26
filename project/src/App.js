@@ -1,13 +1,12 @@
 import './App.css';
 import React from 'react';
 import { Routes, Route, Link } from "react-router-dom";
-
+import Auth from "./auth"
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="basvuru-olustur" element={<Application />} />
+        <Route path="basvuru-olustur" element={<Home />} />
         <Route path="basvuru-basarili" element={<Successful/>} />
         <Route path="basvuru-sorgula" element={<Query/>} />
       </Routes>
@@ -19,37 +18,35 @@ function Home() {
   return (
     <>
       <main>
-        <h2>Giriş Sayfasına Hoş Geldiniz :)</h2>
-        <p>Giriş sayfasına gidiş için linke tıklayınız.</p>
+        <h2 >Başvuru Formunu</h2>
+        <Auth></Auth>
       </main>
       <nav>
-        <Link to="/basvuru-olustur">Başvuru Durumu Sorgula</Link>
+        <Link to="/basvuru-sorgula">Başvuru Durumu Sorgula</Link>
       </nav>
     </>
   );
 }
 
-function Application() {
-  return (
-    <>
-     
-      <nav>
-        <Link to="/">Anasayfa </Link> 
-      </nav>
-    </>
-  );
-  }
-
-  function Successful(){
+function Successful(){
+  return(
     <>
     <nav>
-      <Link to="/register">Register for free </Link> 
+      <Link to="/basvuru-olustur">Basvuru ekranına git.</Link> 
     </nav>
     </>
-  }
-  function Query(){
+  );
+}
+function Query(){
+    return(
     <>
-    
+    <main>
+        <p>Sorgulama ekranına hoş geldiniz.</p>
+    </main>
+    <nav>
+      <Link to="/basvuru-olustur">Basvuru ekranına git.</Link> 
+    </nav>
     </>
-  }
+    );
+}
 export default App;
