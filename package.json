@@ -2,7 +2,7 @@
   "name": "final-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/basvuru-olustur",
+  "homepage": "https://final-project-ilyaskrt-ilyaskrt-ilyas19.vercel.app/basvuru-olustur",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
